@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  nginx:
+    depends_on:
+      - users
+      - auctions
+    restart: always
+    build: ./nginx
+    ports:
+      - '3050:80'
+  users:
+    environment:
+      - PORT=3000
+      - MONGODB_URL=<confidential>
+      - SECRET=<confidential>
+    build: ./users
+    ports:
+      - "3000:3000"
+  
+  auctions:
+    environment:
+      - PORT=5000
+      - MONGODB_URL=<confidential>
+      - SECRET=<confidential>
+    build: ./auctions
+    ports:
+      - "5000:5000"
+  
+  tests:
+    environment:
+      - MONGODB_URL=<confidential>
+      - SECRET=<confidential>
+    build: ./tests
+    command: ["npm", "run", "test"]
