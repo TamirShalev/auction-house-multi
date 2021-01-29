@@ -6,6 +6,7 @@ Some key aspects:
   - Supports login mechanism and user authentication using jsonwebtokens.
   - Provides sensitive user data protection by using bcrypt encryption.
   - Built as a microservices architecure, thus providing modularity, scalability and flexibility.
+  - Uses nginx as a reverse proxy.
   - Includes unit tests.
   - Packed inside Docker Compose for easier developing and testing.
   - (Coming soon) Kubernetes configuration for deployment environment.
