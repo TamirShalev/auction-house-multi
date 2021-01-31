@@ -12,6 +12,11 @@ Some key aspects:
   - Kubernetes configuration for deployment environment.
   
  
+ ## High level architecture
+ 
+ 
+ 
+ 
 ## Dependencies
   - [**Express**](https://www.npmjs.com/package/express) - To create and run the application.
   - [**Mongoose**](https://www.npmjs.com/package/mongoose) - To interact with the database.
