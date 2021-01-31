@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+
+kind: Deployment
+metadata:
+  name: users-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: users
+  template:
+    metadata:
+      labels:
+        component: users
+    spec:
+      containers:
+        - name: users
+          image: tamshalev/users
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: '3000'
+            - name: MONGODB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-url
+                  key: MONGODB_URL
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_SECRET
