@@ -13,7 +13,7 @@ Some key aspects:
   
  
  ## High level architecture
- 
+ ![alt text](https://github.com/TamirShalev/auction-house-multi/blob/master/auction-house.png)
  
  
  
