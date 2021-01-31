@@ -9,7 +9,7 @@ Some key aspects:
   - Uses nginx as a reverse proxy.
   - Includes unit tests.
   - Packed inside Docker Compose for easier developing and testing.
-  - (Coming soon) Kubernetes configuration for deployment environment.
+  - Kubernetes configuration for deployment environment.
   
  
 ## Dependencies
